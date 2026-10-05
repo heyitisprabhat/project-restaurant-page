@@ -1,0 +1,137 @@
+/* Josh Comeau CSS Reset */
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+*:not(dialog) {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Increase line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  text-align: center;
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+#content {
+  padding: 0;
+  border: none;
+}
+
+div {
+  padding: 16px;
+  /* border: solid 2px black; */
+  font-family: "Playfair Display", serif;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+p {
+  white-space: pre-line;
+}
+
+header {
+  background-color: white;
+  position: sticky;
+  top: 0;
+}
+
+nav {
+  border: solid 1px #26352b;
+}
+
+button {
+  font-size: 15px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  color: #f7f3ea;
+  background: #26352b;
+
+  padding: 14px 28px;
+  margin: 14px;
+  border: 1px solid #26352b;
+  border-radius: 2px;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+button:hover {
+  color: #26352b;
+  background: transparent;
+}
