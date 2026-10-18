@@ -1,10 +1,20 @@
+import contactUsImagePath from "./assets/contact-us-image.webp";
+
 export function contactPage() {
   const contact = document.createElement("div");
 
   const contactUs = document.createElement("div");
   const contactUsTitle = document.createElement("h1");
   contactUsTitle.textContent = "Contact Us";
-  contactUs.appendChild(contactUsTitle)
+  contactUs.appendChild(contactUsTitle);
+
+  contactUs.style.backgroundImage = `url(${contactUsImagePath})`;
+  contactUs.style.backgroundSize = "cover";
+  contactUs.style.backgroundPosition = "center bottom";
+  contactUs.style.backgroundRepeat = "no-repeat";
+
+  contactUs.style.width = "100%";
+  contactUs.style.height = "250px";
 
   const mamaSelino = document.createElement("div");
 
@@ -39,7 +49,7 @@ export function contactPage() {
 
   babySelino.append(babySelinoTitle, babySelinoAbout);
 
-  contact.append(contactUs, mamaSelino, papaSelino, babySelino)
+  contact.append(contactUs, mamaSelino, papaSelino, babySelino);
 
-  return contact
+  return contact;
 }

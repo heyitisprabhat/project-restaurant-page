@@ -1,13 +1,13 @@
-import  cappuccinoImagePath from './assets/cappuccino.webp'
-import  latteImagePath from './assets/latte.webp'
-import  toastAndJamImagePath from './assets/toast-and-jam.webp'
-import  freshFruitImagePath from './assets/fresh-fruit.webp'
-import  chocolatePastryImagePath from './assets/chocolate-pastry.webp'
-import  butterCroissantImagePath from './assets/butter-croissant.webp'
-import  pancakesImagePath from './assets/pancakes.webp'
-import  frenchToastImagePath from './assets/french-toast.webp'
+import menuImagePath from "./assets/menu-image.webp";
 
-
+import cappuccinoImagePath from "./assets/cappuccino.webp";
+import latteImagePath from "./assets/latte.webp";
+import toastAndJamImagePath from "./assets/toast-and-jam.webp";
+import freshFruitImagePath from "./assets/fresh-fruit.webp";
+import chocolatePastryImagePath from "./assets/chocolate-pastry.webp";
+import butterCroissantImagePath from "./assets/butter-croissant.webp";
+import pancakesImagePath from "./assets/pancakes.webp";
+import frenchToastImagePath from "./assets/french-toast.webp";
 
 export function menuPage() {
   const menu = document.createElement("div");
@@ -17,6 +17,14 @@ export function menuPage() {
   foodMenuTitle.textContent = "Food Menu";
 
   foodMenu.appendChild(foodMenuTitle);
+
+  foodMenu.style.backgroundImage = `url(${menuImagePath})`;
+  foodMenu.style.backgroundSize = "cover";
+  foodMenu.style.backgroundPosition = "center bottom";
+  foodMenu.style.backgroundRepeat = "no-repeat";
+
+  foodMenu.style.width = "100%";
+  foodMenu.style.height = "250px";
 
   const beverages = document.createElement("div");
   const beveragesTitle = document.createElement("h2");
@@ -140,7 +148,20 @@ export function menuPage() {
 
   frenchToast.append(frenchToastTitle, frenchToastAbout, frenchToastImage);
 
-  menu.append(foodMenu, beverages, cappuccino, latte, sides, toastAndJam, freshFruit, mainDishes, chocolatePastry, butterCroissant, pancakes, frenchToast)
+  menu.append(
+    foodMenu,
+    beverages,
+    cappuccino,
+    latte,
+    sides,
+    toastAndJam,
+    freshFruit,
+    mainDishes,
+    chocolatePastry,
+    butterCroissant,
+    pancakes,
+    frenchToast,
+  );
 
-  return menu
+  return menu;
 }
